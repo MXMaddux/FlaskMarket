@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Guitar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="d-flex justify-content-between align-items-center col-12">
+        <h1 class="text-center">Welcome !!!</h1>
+        <div class="d-flex col-4 justify-content-around">
+            <a href="/dashboard" class="btn btn-info">Dashboard</a>
+            <a href="/logout" class="btn btn-info">Logout</a>
+
+        </div>
+
+    </nav>
+    <div class="container-fluid">
+        <form action="/create/guitar" method="post" class="col-4 p-4 my-4 bg-dark text-light mx-auto">
+            <h2 class="text-primary">Find your next guitar!</h2>
+            <div class="d-flex justify-content-between col-9">
+                <div class="col-4">
+                  <form class="form-select col-4 p-4 my-4 bg-dark text-light mx-auto" action="/create/guitar" method="post" style="color:white">
+                    {{form.hidden_tag()}}
+                    <div class="form-select">
+                      {{form.music_style.label()}}
+                      {{form.music_style}}
+                    </div>
+                    <div class="form-select mt-4">
+                      {{form.budget.label()}}
+                      {{form.budget}}
+                    </div>
+                    <div class="form-select mt-4">
+                      {{form.looks.label()}}
+                      {{form.looks}}
+                    </div>
+                    <div class="form-select mt-4">
+                      {{form.orientation.label()}}
+                      {{form.orientation}}
+                    </div>
+                    <br>
+                    <div class="form-select">
+                      {{form.submit(class="btn btn-primary")}}
+                    </div>
+
+                  </form>
+                </div>
+
+    </div>
+    </div>
+    </form>
+    </>
+</body>
+<style>
+    body {
+        background-color: #212121;
+        color: #fff;
+    }
+</style>
+
+</html>
